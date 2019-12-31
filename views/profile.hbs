@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>profile-mysales</title>
+    {{> bootstrap}}
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    {{> shop_nav}}
+    <div>
+        <div class="card">
+            <img src="/../images/profilebg.png" class="card-img-top profile-bg" alt="..." />
+            {{!-- <img src="/../images/profileimg.png" class="img-thumbnail profile-img" alt="..." /> --}}
+            <div class="card-body">
+                <h5 class="profile-name">Your Profile</h5>
+                {{!-- <br> --}}
+                <hr />
+                <div class="row">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-4 border-right border-left">
+                        <h6 class="text-muted">Name</h6>
+                        <h6>{{ user.name }}</h6>
+                        <form class="form-inline" method="POST" action="http://localhost:3000/profile">
+                            <input name="name" type="text" class="form-control mb-2 mr-sm-2" id="updateName"
+                                placeholder="Your Name"></input>
+                            <button type="submit" class="btn btn-info btn-sm mb-2">update</button>
+                        </form>
+
+                        <br></br>
+
+                        <h6 class="text-muted">Email Address</h6>
+                        <h6>{{ user.email }}</h6>
+                        <form class="form-inline" method="POST" action="http://localhost:3000/profile">
+                            <input name="email" type="email" class="form-control mb-2 mr-sm-2" id="updateEmail"
+                                placeholder="yourname@mail.com"></input>
+                            <button type="submit" class="btn btn-info btn-sm mb-2">update</button>
+                        </form>
+
+                        <br></br>
+
+                        <h6 class="text-muted">Account Number</h6>
+                        <h6>{{ user.acNum }}</h6>
+                        <form class="form-inline" method="POST" action="http://localhost:3000/profile">
+                            <input name="acNum" type="text" class="form-control mb-2 mr-sm-2" id="updateacNum"
+                                placeholder="990099"></input>
+                            <button type="submit" class="btn btn-info btn-sm mb-2">update</button>
+                        </form>
+                    </div>
+                    <div class="col-md-4"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

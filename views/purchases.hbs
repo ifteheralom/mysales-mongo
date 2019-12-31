@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    {{> bootstrap}}
+    <link rel="stylesheet" href="/css/style.css">
+    <title>purchases-mysales</title>
+</head>
+
+<body>
+    {{> shop_nav}}
+    <div class="base">
+        <div class="">
+            {{#each item}}
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    {{> pitem}}
+                    <br>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            {{else}}
+            <p class="empty">No Purchase History</p>
+            {{/each}}
+
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>
